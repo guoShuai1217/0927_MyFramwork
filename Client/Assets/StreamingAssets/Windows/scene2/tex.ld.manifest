@@ -1,0 +1,24 @@
+ManifestFileVersion: 0
+CRC: 197556044
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: d5c39731b26487c03659765da1950b80
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 460b4f5d62b6facbccf7c01637df8f00
+HashAppended: 0
+ClassTypes:
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 213
+  Script: {instanceID: 0}
+Assets:
+- Assets/Art/Scene2/Tex/6.jpg
+- Assets/Art/Scene2/Tex/12.jpg
+- Assets/Art/Scene2/Tex/10.jpg
+- Assets/Art/Scene2/Tex/8.jpg
+- Assets/Art/Scene2/Tex/9.jpg
+- Assets/Art/Scene2/Tex/11.jpg
+- Assets/Art/Scene2/Tex/7.jpg
+Dependencies: []

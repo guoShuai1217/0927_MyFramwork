@@ -1,0 +1,43 @@
+D:\Manew\Client\Assets\Plugins\GameProtocol.dll
+D:\Manew\Client\Assets\Plugins\GameProtocol.pdb
+D:\Manew\Server\GameProtocol\obj\Debug\GameProtocol.dll
+D:\Manew\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+D:\Manew\Server\GameProtocol\obj\Debug\GameProtocol.csprojResolveAssemblyReference.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Client\Assets\Plugins\GameProtocol.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Client\Assets\Plugins\GameProtocol.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\GameProtocol\obj\Debug\GameProtocol.csprojAssemblyReference.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\GameProtocol\obj\Debug\GameProtocol.csproj.CoreCompileInputs.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\GameProtocol\obj\Debug\GameProtocol.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+F:\zhanggs\MyFramwork\Assets\Plugins\GameProtocol.dll
+F:\zhanggs\MyFramwork\Assets\Plugins\GameProtocol.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\GameProtocol\obj\Debug\GameProtocol.csproj.CoreCompileInputs.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\GameProtocol\obj\Debug\GameProtocol.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\GameProtocol\obj\Debug\GameProtocol.csprojAssemblyReference.cache
+F:\zhanggs\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.csprojAssemblyReference.cache
+F:\zhanggs\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.csproj.CoreCompileInputs.cache
+F:\zhanggs\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.dll
+F:\zhanggs\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+E:\zhanggs\MyFramwork\Assets\Plugins\GameProtocol.dll
+E:\zhanggs\MyFramwork\Assets\Plugins\GameProtocol.pdb
+E:\MyStudy\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.csproj.CoreCompileInputs.cache
+E:\MyStudy\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.dll
+E:\MyStudy\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+E:\MyStudy\MyFramwork\Assets\Plugins\GameProtocol.dll
+E:\MyStudy\MyFramwork\Assets\Plugins\GameProtocol.pdb
+E:\MyStudy\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Assets\Plugins\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Assets\Plugins\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Assets\Plugins\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Assets\Plugins\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Debug\GameProtocol.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Debug\GameProtocol.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Debug\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Debug\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Client\Assets\Plugins\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Client\Assets\Plugins\GameProtocol.pdb

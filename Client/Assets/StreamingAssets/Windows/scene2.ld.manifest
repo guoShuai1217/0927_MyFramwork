@@ -1,0 +1,32 @@
+ManifestFileVersion: 0
+CRC: 862020666
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 08c7ae0bd8a62696e67ffa91a3215fad
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 72808fb805bc59b1ec2bcd00408814d2
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+Assets:
+- Assets/Art/Scene2/Player2.prefab
+Dependencies: []

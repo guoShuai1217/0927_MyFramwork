@@ -1,0 +1,92 @@
+D:\Manew\Server\Server\bin\Debug\Server.exe.config
+D:\Manew\Server\Server\bin\Debug\Server.exe
+D:\Manew\Server\Server\bin\Debug\Server.pdb
+D:\Manew\Server\Server\obj\Debug\Server.exe
+D:\Manew\Server\Server\obj\Debug\Server.pdb
+D:\Manew\Server\Server\bin\Debug\ServerTools.dll
+D:\Manew\Server\Server\bin\Debug\ServerTools.pdb
+D:\Manew\Server\Server\obj\Debug\Server.csprojResolveAssemblyReference.cache
+D:\Manew\Server\Server\bin\Debug\GameProtocol.dll
+D:\Manew\Server\Server\bin\Debug\GameProtocol.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\Server.exe.config
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\Server.exe
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\Server.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\GameProtocol.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\ServerTools.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\GameProtocol.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\bin\Debug\ServerTools.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\obj\Debug\Server.csproj.CopyComplete
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\obj\Debug\Server.exe
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\Server\Server\obj\Debug\Server.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\Server.exe.config
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\Server.exe
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\Server.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\GameProtocol.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\ServerTools.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\GameProtocol.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\ServerTools.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\obj\Debug\Server.csproj.CopyComplete
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\obj\Debug\Server.exe
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\obj\Debug\Server.pdb
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\MySql.Data.dll
+F:\BaiduNetdiskDownload\棋牌实战视频教程【第一季】\资源\MyCard\Server\Server\bin\Debug\MySql.Data.xml
+F:\zhanggs\MyFramwork\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+F:\zhanggs\MyFramwork\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+F:\zhanggs\MyFramwork\Server\Server\obj\Debug\Server.exe
+F:\zhanggs\MyFramwork\Server\Server\obj\Debug\Server.pdb
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\Server.exe.config
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\Server.exe
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\Server.pdb
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\GameProtocol.dll
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\MySql.Data.dll
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\ServerTools.dll
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\GameProtocol.pdb
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\MySql.Data.xml
+F:\zhanggs\MyFramwork\Server\Server\bin\Debug\ServerTools.pdb
+F:\zhanggs\MyFramwork\Server\Server\obj\Debug\Server.csproj.CopyComplete
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\Server.exe.config
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\Server.exe
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\Server.pdb
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\MySql.Data.dll
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\ServerTools.dll
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\GameProtocol.pdb
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\MySql.Data.xml
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\ServerTools.pdb
+E:\MyStudy\MyFramwork\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+E:\MyStudy\MyFramwork\Server\Server\obj\Debug\Server.csproj.CopyComplete
+E:\MyStudy\MyFramwork\Server\Server\obj\Debug\Server.exe
+E:\MyStudy\MyFramwork\Server\Server\obj\Debug\Server.pdb
+E:\MyStudy\MyFramwork\Server\Server\bin\Debug\GameProtocol.dll
+E:\MyStudy\MyFramwork\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\Server.exe.config
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\MySql.Data.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\ServerTools.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\MySql.Data.xml
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Debug\ServerTools.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Debug\Server.csproj.CopyComplete
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Debug\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Debug\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\Server.exe.config
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\MySql.Data.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\ServerTools.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\MySql.Data.xml
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\ServerTools.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Debug\Server.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Debug\Server.csproj.CopyComplete
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Debug\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Debug\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Debug\GameProtocol.dll

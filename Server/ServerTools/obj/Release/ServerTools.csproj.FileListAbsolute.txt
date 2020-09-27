@@ -1,0 +1,9 @@
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\bin\Release\ServerTools.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\bin\Release\ServerTools.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\bin\Release\MySql.Data.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\bin\Release\MySql.Data.xml
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\obj\Release\ServerTools.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\obj\Release\ServerTools.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\obj\Release\ServerTools.csproj.CopyComplete
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\obj\Release\ServerTools.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\ServerTools\obj\Release\ServerTools.pdb

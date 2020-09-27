@@ -1,0 +1,8 @@
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\bin\Release\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\bin\Release\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Release\GameProtocol.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Release\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Release\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Client\Assets\Plugins\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Client\Assets\Plugins\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\GameProtocol\obj\Release\GameProtocol.csprojAssemblyReference.cache

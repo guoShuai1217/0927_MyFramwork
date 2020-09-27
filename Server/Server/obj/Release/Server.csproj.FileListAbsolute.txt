@@ -1,0 +1,34 @@
+D:\Manew\Server\Server\bin\Release\Server.exe.config
+D:\Manew\Server\Server\bin\Release\Server.exe
+D:\Manew\Server\Server\bin\Release\Server.pdb
+D:\Manew\Server\Server\obj\Release\Server.exe
+D:\Manew\Server\Server\obj\Release\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\Server.exe.config
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\GameProtocol.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\MySql.Data.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\NetFrame.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\ServerTools.dll
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\MySql.Data.xml
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\bin\Release\ServerTools.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Release\Server.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Release\Server.csproj.CopyComplete
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Release\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Release\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\MyFramwork\Server\Server\obj\Release\Server.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Release\Server.csprojAssemblyReference.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Release\Server.csproj.CoreCompileInputs.cache
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Release\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Release\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\Server.exe.config
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\Server.exe
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\Server.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\MySql.Data.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\NetFrame.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\ServerTools.dll
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\GameProtocol.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\MySql.Data.xml
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\bin\Release\ServerTools.pdb
+G:\20200319_MyFramwork_客户端 + 服务器\Server\Server\obj\Release\Server.csproj.CopyComplete
