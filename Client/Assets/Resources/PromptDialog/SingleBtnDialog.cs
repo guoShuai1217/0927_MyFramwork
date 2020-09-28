@@ -89,7 +89,7 @@ public class SingleBtnDialog : UIDialogBase
 
     //};
     // 后面三个参数可以不填,会给默认值
-    //UIMgr.Instance.PushDialog(UIDialog.SingleBtnDialog, "开发中,敬请期待.",callBack,"提示","确定");
+    //Game.DialogMgr.PushDialog(UIDialog.SingleBtnDialog, "开发中,敬请期待.",callBack,"提示","确定");
 
     #endregion
 }

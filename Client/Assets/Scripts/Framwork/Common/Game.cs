@@ -158,13 +158,18 @@ public class Game : MonoBehaviour
 
     // 更新完成了,开始游戏逻辑
     public void StartGame()
-    {
+    {     
+        // 资源更新完后 , 去加载Manifest文件
+        StartCoroutine(LoadManifest.Instance.LoadAssetBundleManifest(BeginLuaMain));
         UIMgr.InitializeUISystem();
         Game.UIMgr.PushScene(UIPage.LoginPage);
-        // 资源更新完后 , 去加载Manifest文件
-        StartCoroutine(LoadManifest.Instance.LoadAssetBundleManifest());
+    }
 
+    // Manifest文件加载完成,去加载 Main.lua
+    private void BeginLuaMain()
+    {
         Game.Lua.LoadLuaMain();
+      
     }
 
 

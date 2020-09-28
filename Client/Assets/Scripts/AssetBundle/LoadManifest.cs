@@ -8,6 +8,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using System;
 
 public class LoadManifest  
 {
@@ -58,7 +59,7 @@ public class LoadManifest
 	/// 加载 AssetBundleManifest 文件
 	/// </summary>
 	/// <returns></returns>
-	public IEnumerator LoadAssetBundleManifest()
+	public IEnumerator LoadAssetBundleManifest(Action callback = null)
 	{
 		WWW www = new WWW(manifestPath);
 		yield return www;

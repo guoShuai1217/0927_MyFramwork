@@ -5,6 +5,7 @@
  *
  *  	DataTime: 2019.04.11
  */
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -89,5 +90,10 @@ public class FadedDialog : UIDialogBase
         StopCoroutine(promptAnim());
     }
 
+    #region 使用方式
+
+   // Game.DialogMgr.PushDialog(UIDialog.FadedDialog, "登录成功", Color.green);
+
+    #endregion
 
 }

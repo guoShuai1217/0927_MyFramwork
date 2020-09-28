@@ -28,12 +28,7 @@ public delegate void DownLoadError(string reason);
 public abstract class WWWItemBase  
 {
     protected string url;
-
-    //public WWWItemBase(string url)
-    //{
-    //    this.url = url;
-    //}
-
+  
     protected bool isFinish = false;
     /// <summary>
     /// 是否使用完成（true：可以再从池子里拿出来复用）
@@ -42,6 +37,9 @@ public abstract class WWWItemBase
     {
         get { return isFinish; }
     }
+
+    // 请求超时时间
+    public float TimeOut = 5f;
 
     public BeginDownLoad beginDownload;
     public DownLoadProgress downloadProgress;

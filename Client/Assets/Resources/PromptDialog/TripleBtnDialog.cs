@@ -123,7 +123,7 @@ public class TripleBtnDialog :  UIDialogBase
     //};
 
     // // 后面四个参数可以不填,会给默认值
-    //UIMgr.Instance.PushDialog(UIDialog.TripleBtnDialog, "确定退出当前程序吗?", callBack, "郑重警告", "是吗", "否吗", "取消吧");
+    //Game.DialogMgr.PushDialog(UIDialog.TripleBtnDialog, "确定退出当前程序吗?", callBack, "郑重警告", "是吗", "否吗", "取消吧");
 
     #endregion
 }

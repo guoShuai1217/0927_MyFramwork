@@ -81,7 +81,7 @@ public class ABEditor
     {
         AssetDatabase.RemoveUnusedAssetBundleNames(); // 删除没有用到的tag名
 
-        string outPath = Application.dataPath + "/" + "Art";
+        string outPath = Application.dataPath + "/" + "Demo/Art";
 
         DirectoryInfo directoryInfo = new DirectoryInfo(outPath);
         FileSystemInfo[] dirInfo = directoryInfo.GetFileSystemInfos(); // 所有的一级文件系统(Art文件夹下面有 Scene1,Scene2,Scene3文件夹)

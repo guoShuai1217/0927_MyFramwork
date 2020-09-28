@@ -104,7 +104,7 @@ public class DoubleBtnDialog : UIDialogBase
 
     //};
     // // 后面三个参数可以不填,会给默认值
-    //UIMgr.Instance.PushDialog(UIDialog.DoubleBtnDialog,"确定退出系统吗?退出系统将不再打开",callBack,"警告","再玩一会" , "退出了");
+    //Game.DialogMgr.PushDialog(UIDialog.DoubleBtnDialog,"确定退出系统吗?退出系统将不再打开",callBack,"警告","再玩一会" , "退出了");
 
     #endregion
 }

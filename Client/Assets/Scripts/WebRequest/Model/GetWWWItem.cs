@@ -46,11 +46,21 @@ public class GetWWWItem : WWWItemBase
             beginDownload();
 
         WWW www = new WWW(url);
+        float timeNow = Time.time;
         while (!www.isDone)
         {
             if (downloadProgress != null)
                 downloadProgress(www.progress);
 
+            if(Time.time - timeNow > TimeOut)
+            {
+                Debug.LogError("请求超时.. " + url);
+                if (downloadError != null)
+                {
+                    downloadError("请求超时");
+                    yield break;
+                }
+            }
             yield return www.progress;
         }
 
