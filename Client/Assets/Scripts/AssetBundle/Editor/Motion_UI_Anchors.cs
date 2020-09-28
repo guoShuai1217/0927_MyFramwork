@@ -13,7 +13,7 @@ using UnityEditor;
 /// </summary>
 public class Motion_UI_Anchors : Editor
 {
-	[MenuItem("guoShuai/自动对齐锚点")]
+	[MenuItem("UI/自动对齐锚点")]
 	public static void SetAnchorsEditor()
 	{
 		Transform[] transforms = Selection.transforms;

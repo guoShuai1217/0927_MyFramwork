@@ -37,9 +37,8 @@ public class PathUtil
 			case RuntimePlatform.IPhonePlayer:
 				return "IOS";
 
-			case RuntimePlatform.OSXPlayer:
-			case RuntimePlatform.OSXEditor:
-				return "OSX";
+			case RuntimePlatform.WebGLPlayer:			 
+				return "Web";
 	 
 			default:
 				return null;

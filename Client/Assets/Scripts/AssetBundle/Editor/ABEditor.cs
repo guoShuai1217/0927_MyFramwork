@@ -1,9 +1,14 @@
 ﻿/*
- *		Description:  
+ *		 Description:  
+ *		 操作步骤如下 : 
+ *		 1. MarkSign 给需要打成AB包的资源做标记;
+ *		 2. BuildeAssetBundle 将带有标记的资源打成AB包;
+ *		 3. 拷贝Lua脚本 把Lua脚本和AB包资源放在一起,便于从服务端下载;
+ *		 4. 生成MD5文件 便于每次启动游戏的时候 检测是否更新了资源或代码
+ *			 
+ *		 CreatedBy:  guoShuai
  *
- *		  CreatedBy:  guoShuai
- *
- *		   DataTime:  2019.05
+ *		 DataTime:  2019.05
  */
 using System.Collections;
 using System.Collections.Generic;
@@ -14,290 +19,339 @@ using System.IO;
 using System;
 using System.Security.Cryptography;
 using System.Text;
+using UnityEditor.Experimental.Build.AssetBundle;
 
-public class ABEditor 
+public class ABEditor
 {
 
+    #region 打包
 
-	#region 打包
-
-	[MenuItem("AssetBundle/BuildAssetBundle")]
-	public static void BuildAssetBundle()
-	{
-		string outPath = PathUtil.GetAssetBundlePath(); // StreamingAssets/Windows
-
-		BuildPipeline.BuildAssetBundles(outPath, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.StandaloneWindows64);
-	}
-	#endregion
-
-	#region 删除
-
-	[MenuItem("AssetBundle/DeleteAssetBundle")]
-	public static void DeleteAssetBundle()
-	{
-		string outPath = PathUtil.GetAssetBundlePath();
-
-		Directory.Delete(outPath, true);
-		File.Delete(outPath + ".meta");
-		AssetDatabase.Refresh();
-	}
-	#endregion
-
-	#region 自动做标记
-
-	[MenuItem("AssetBundle/MarkSign")]
-	public static void MarkSign()
-	{
-		AssetDatabase.RemoveUnusedAssetBundleNames(); // 删除没有用到的tag名
-
-		string outPath = Application.dataPath + "/" + "Art";
-
-		DirectoryInfo directoryInfo = new DirectoryInfo(outPath);
-		FileSystemInfo[] dirInfo = directoryInfo.GetFileSystemInfos(); // 所有的一级文件系统(Art文件夹下面有 Scene1,Scene2,Scene3文件夹)
-
-		foreach (FileSystemInfo item in dirInfo)
-		{
-			if(item is DirectoryInfo)// item as DirectoryInfo != null
-			{
-				string scenePath = outPath + "/" + item.Name; //  D:/FramWork/Assets/Art/Scene1
-				SceneOverView(scenePath);
-			}
-		}
-
-		string copyPath = PathUtil.GetAssetBundlePath();
-
-		CopyRecoder(outPath, copyPath);
-
-		AssetDatabase.Refresh();
-
-	}
-
-	/// <summary>
-	/// 拷贝文件
-	/// </summary>
-	/// <param name="sourcePath">文件原来的路径</param>
-	/// <param name="disPath">你想拷贝到的路径</param>
-	private static void CopyRecoder(string sourcePath,string disPath)
-	{
-		DirectoryInfo dir = new  DirectoryInfo(sourcePath);
-		if(!dir.Exists)
-		{
-			Debug.Log("Path is Not Exists ");
-			return;
-		}
-
-		if (!Directory.Exists(disPath))
-			Directory.CreateDirectory(disPath);
-
-		FileSystemInfo[] fileArr = dir.GetFileSystemInfos();
-
-		for (int i = 0; i < fileArr.Length; i++)
-		{
-			FileInfo file = fileArr[i] as FileInfo;
-
-			if(file != null && file.Extension == ".txt")
-			{
-				string soureFile = sourcePath + "/" + file.Name;
-				string disFile = disPath + "/" + file.Name;
-
-				File.Copy(soureFile, disFile, true);
-			}
-
-		}
-	}
-
-	/// <summary>
-	/// 遍历 Art/Scene1下的所有的文件系统
-	/// </summary>
-	private static void SceneOverView(string scenePath)
-	{
-
-		Dictionary<string, string> recordDic = new Dictionary<string, string>();
-		ChangeHead(scenePath, recordDic);
-		// 记录对应关系
-		string txtFile = "Record.txt";
-		string outPath = scenePath + txtFile;
-		using (FileStream fs = new FileStream(outPath,FileMode.OpenOrCreate))
-		{
-			using (StreamWriter sw = new StreamWriter(fs))
-			{
-
-				sw.WriteLine(recordDic.Count);
-				foreach (var item in recordDic)
-				{
-					sw.WriteLine(item.Key + "--" + item.Value);
-				}
-			}
-		}
-	}
-
-	/// <summary>
-	/// 截取相对路径 
-    /// // D:/FreamWork/Assets/Art/Scene1/Load --> Scene1/Load
-	/// </summary>
-	private static void ChangeHead(string outPath, Dictionary<string, string> recordDic)  // outPath = D:/FreamWork/Assets/Art/Scene1
+    [MenuItem("AssetBundle/BuildAssetBundle/PC")]
+    public static void BuildAssetBundlePC()
     {
-        
+        string outPath = PathUtil.GetAssetBundlePath(); // StreamingAssets/Windows
+
+        BuildPipeline.BuildAssetBundles(outPath, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.StandaloneWindows64);
+    }
+
+    [MenuItem("AssetBundle/BuildAssetBundle/Android")]
+    public static void BuildAssetBundleAndroid()
+    {
+        string outPath = PathUtil.GetAssetBundlePath(); // StreamingAssets/Windows
+
+        BuildPipeline.BuildAssetBundles(outPath, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.Android);
+    }
+
+    [MenuItem("AssetBundle/BuildAssetBundle/IPhone")]
+    public static void BuildAssetBundleIOS()
+    {
+        string outPath = PathUtil.GetAssetBundlePath(); // StreamingAssets/Windows
+
+        BuildPipeline.BuildAssetBundles(outPath, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.iOS);
+    }
+
+    [MenuItem("AssetBundle/BuildAssetBundle/Web")]
+    public static void BuildAssetBundleWeb()
+    {
+        string outPath = PathUtil.GetAssetBundlePath(); // StreamingAssets/Windows
+
+        BuildPipeline.BuildAssetBundles(outPath, BuildAssetBundleOptions.UncompressedAssetBundle, BuildTarget.WebGL);
+    }
+
+
+    #endregion
+
+    #region 删除
+
+    [MenuItem("AssetBundle/DeleteAssetBundle")]
+    public static void DeleteAssetBundle()
+    {
+        string outPath = PathUtil.GetAssetBundlePath();
+
+        Directory.Delete(outPath, true);
+        File.Delete(outPath + ".meta");
+        AssetDatabase.Refresh();
+    }
+    #endregion
+
+    #region 自动做标记
+
+    [MenuItem("AssetBundle/MarkSign")]
+    public static void MarkSign()
+    {
+        AssetDatabase.RemoveUnusedAssetBundleNames(); // 删除没有用到的tag名
+
+        string outPath = Application.dataPath + "/" + "Art";
+
+        DirectoryInfo directoryInfo = new DirectoryInfo(outPath);
+        FileSystemInfo[] dirInfo = directoryInfo.GetFileSystemInfos(); // 所有的一级文件系统(Art文件夹下面有 Scene1,Scene2,Scene3文件夹)
+
+        foreach (FileSystemInfo item in dirInfo)
+        {
+            if (item is DirectoryInfo)// item as DirectoryInfo != null
+            {
+                string scenePath = outPath + "/" + item.Name; //  D:/FramWork/Assets/Art/Scene1
+                SceneOverView(scenePath);
+            }
+        }
+
+        string copyPath = PathUtil.GetAssetBundlePath();
+
+        CopyRecoder(outPath, copyPath);
+
+        AssetDatabase.Refresh();
+
+    }
+
+    /// <summary>
+    /// 拷贝文件
+    /// </summary>
+    /// <param name="sourcePath">文件原来的路径</param>
+    /// <param name="disPath">你想拷贝到的路径</param>
+    private static void CopyRecoder(string sourcePath, string disPath, bool isLua = false)
+    {
+        DirectoryInfo dir = new DirectoryInfo(sourcePath);
+        if (!dir.Exists)
+        {
+            Debug.Log("Path is Not Exists ");
+            return;
+        }
+
+        if (!Directory.Exists(disPath))
+            Directory.CreateDirectory(disPath);
+
+        FileSystemInfo[] fileArr = dir.GetFileSystemInfos();
+
+        string fileExtension = "";
+        if (isLua)
+        {
+            fileExtension = ".lua";
+        }
+        else
+        {
+            fileExtension = ".txt";
+        }
+
+        for (int i = 0; i < fileArr.Length; i++)
+        {
+            FileInfo file = fileArr[i] as FileInfo;
+
+            if (file != null && file.Extension == fileExtension)
+            {
+                string soureFile = sourcePath + "/" + file.Name;
+                string disFile = disPath + "/" + file.Name;
+
+                File.Copy(soureFile, disFile, true);
+            }
+         
+        }
+    }
+
+    /// <summary>
+    /// 遍历 Art/Scene1下的所有的文件系统
+    /// </summary>
+    private static void SceneOverView(string scenePath)
+    {
+
+        Dictionary<string, string> recordDic = new Dictionary<string, string>();
+        ChangeHead(scenePath, recordDic);
+        // 记录对应关系
+        string txtFile = "Record.txt";
+        string outPath = scenePath + txtFile;
+        using (FileStream fs = new FileStream(outPath, FileMode.OpenOrCreate))
+        {
+            using (StreamWriter sw = new StreamWriter(fs))
+            {
+
+                sw.WriteLine(recordDic.Count);
+                foreach (var item in recordDic)
+                {
+                    sw.WriteLine(item.Key + "--" + item.Value);
+                }
+            }
+        }
+    }
+
+    /// <summary>
+    /// 截取相对路径 
+    /// // D:/FreamWork/Assets/Art/Scene1/Load --> Scene1/Load
+    /// </summary>
+    private static void ChangeHead(string outPath, Dictionary<string, string> recordDic)  // outPath = D:/FreamWork/Assets/Art/Scene1
+    {
+
 
         int tmpCount = outPath.IndexOf("Assets"); // 得到了 D:/FreamWork/ 的长度
-		int tmpLength = outPath.Length; // 总长度
+        int tmpLength = outPath.Length; // 总长度
 
-		string subPath = outPath.Substring(tmpCount,tmpLength-tmpCount); // 得到了 Assets/Art/Scene1 
+        string subPath = outPath.Substring(tmpCount, tmpLength - tmpCount); // 得到了 Assets/Art/Scene1 
 
-		DirectoryInfo dir = new DirectoryInfo(outPath);
+        DirectoryInfo dir = new DirectoryInfo(outPath);
 
-		if(dir != null)
-		{
-			ListFiles(dir, subPath,recordDic);
-		}
-		else
-		{
-			Debug.Log("This Path is Not Exists");
-		}
+        if (dir != null)
+        {
+            ListFiles(dir, subPath, recordDic);
+        }
+        else
+        {
+            Debug.Log("This Path is Not Exists");
+        }
 
-	}
+    }
 
-	/// <summary>
-	/// 遍历场景中的每一个功能文件夹
-	/// </summary>	 
-	private static void ListFiles(FileSystemInfo fileSystemInfo,string subPath,Dictionary<string,string> recordDic)
-	{
-		if (!fileSystemInfo.Exists)
-		{
-			Debug.Log(fileSystemInfo.Name + "   is Not Exists");
-			return;
-		}
+    /// <summary>
+    /// 遍历场景中的每一个功能文件夹
+    /// </summary>	 
+    private static void ListFiles(FileSystemInfo fileSystemInfo, string subPath, Dictionary<string, string> recordDic)
+    {
+        if (!fileSystemInfo.Exists)
+        {
+            Debug.Log(fileSystemInfo.Name + "   is Not Exists");
+            return;
+        }
 
-		if (fileSystemInfo.Extension == ".meta")
-			return;
- 
-		DirectoryInfo dir = fileSystemInfo as DirectoryInfo;
+        if (fileSystemInfo.Extension == ".meta")
+            return;
 
-		FileSystemInfo[] info = dir.GetFileSystemInfos();
+        DirectoryInfo dir = fileSystemInfo as DirectoryInfo;
 
-		foreach (FileSystemInfo item in info)
-		{
-			FileInfo fileInfo = item as FileInfo;
-		    if(fileInfo != null) // 是文件 , 就改变tag
-			{				
-				ChangeMark(fileInfo, subPath, recordDic);
-			}
-			else // 不是文件,就继续遍历(递归)
-			{
-				ListFiles(item, subPath,recordDic);
-			}
-		}
+        FileSystemInfo[] info = dir.GetFileSystemInfos();
 
-	}
+        foreach (FileSystemInfo item in info)
+        {
+            FileInfo fileInfo = item as FileInfo;
+            if (fileInfo != null) // 是文件 , 就改变tag
+            {
+                ChangeMark(fileInfo, subPath, recordDic);
+            }
+            else // 不是文件,就继续遍历(递归)
+            {
+                ListFiles(item, subPath, recordDic);
+            }
+        }
 
-	/// <summary>
-	/// 改变物体的tag
-	/// </summary>
-	private static void ChangeMark(FileInfo fileInfo,string subPath,Dictionary<string,string> recordDic)
-	{
-		if (fileInfo.Extension == ".meta")
-			return;
+    }
 
-		string markName = GetBundlePath(fileInfo,subPath);
-		
+    /// <summary>
+    /// 改变物体的tag
+    /// </summary>
+    private static void ChangeMark(FileInfo fileInfo, string subPath, Dictionary<string, string> recordDic)
+    {
+        if (fileInfo.Extension == ".meta")
+            return;
 
-		SetMark(fileInfo, markName, recordDic);
-
-	}
-
-	public static void SetMark(FileInfo file,string markName,Dictionary<string,string> recordDic)
-	{
-
-		//markName = markName.ToLower();
-
-		string fullPath = file.FullName;
-
-		// 获取 Assets之后的路径 
-
-		int assetCount = fullPath.IndexOf("Assets");
-		string assetPath = fullPath.Substring(assetCount, fullPath.Length - assetCount);
-
-		// 改变物体的tag值
-		AssetImporter ai = AssetImporter.GetAtPath(assetPath);
-
-		ai.assetBundleName = markName.ToLower();
-
-		if (file.Extension == ".unity")
-		{
-			ai.assetBundleVariant = "u3d";
-		}
-		else
-		{
-			ai.assetBundleVariant = "ld";
-		}
-
-		string subName = "";
-
-		if (markName.Contains("/"))
-		{
-			subName = markName.Split('/')[1];
-
-		}
-		else
-		{
-			subName = markName;
-		}
-
-		string subPath = ai.assetBundleName.ToLower() + "." + ai.assetBundleVariant;
-
-		if (!recordDic.ContainsKey(subName))
-			recordDic.Add(subName, subPath);
-
-	}
-
-	/// <summary>
-	/// 获取标记名
-	/// </summary>	 
-	private static string GetBundlePath(FileInfo fileInfo,string subPath) //subPath = Assets/Art\Scene1
-	{
-		// D:\guoShuai\Projects\FramWork\Assets\Art\Scene1\Load\testthree\Capsule.prefab
-		string tmpPath = fileInfo.FullName;
-	 
-		tmpPath = GetUnityPath(tmpPath);
-
-		int assetCount = tmpPath.IndexOf(subPath);
-		assetCount += subPath.Length + 1;
-		 
-		int nameCount = tmpPath.LastIndexOf(fileInfo.Name); // Capsule.prefab
-
-		int tmpLength = nameCount - assetCount;
-
-		int tmpCount = subPath.LastIndexOf('/');
-
-		string sceneName = subPath.Substring(tmpCount + 1, subPath.Length - tmpCount - 1);
-	 
-		if (tmpLength > 0)
-		{
-			string subString = tmpPath.Substring(assetCount, tmpPath.Length - assetCount);
-			string subName = subString.Split('/')[0];
-			return sceneName + "/" + subName;
-		}
-
-		return sceneName;
-
-	}
+        string markName = GetBundlePath(fileInfo, subPath);
 
 
+        SetMark(fileInfo, markName, recordDic);
 
-	/// <summary>
-	/// 把windows路径(反斜杠) 转换成 Unity的路径(正斜杠)
-	/// </summary>
-	private static string GetUnityPath(string windowsPath)
-	{
-		string unityPath = windowsPath.Replace('\\', '/');
-		return unityPath;
-	}
+    }
+
+    public static void SetMark(FileInfo file, string markName, Dictionary<string, string> recordDic)
+    {
+
+        //markName = markName.ToLower();
+
+        string fullPath = file.FullName;
+
+        // 获取 Assets之后的路径 
+
+        int assetCount = fullPath.IndexOf("Assets");
+        string assetPath = fullPath.Substring(assetCount, fullPath.Length - assetCount);
+
+        // 改变物体的tag值
+        AssetImporter ai = AssetImporter.GetAtPath(assetPath);
+
+        ai.assetBundleName = markName.ToLower();
+
+        if (file.Extension == ".unity")
+        {
+            ai.assetBundleVariant = "u3d";
+        }
+        else
+        {
+            ai.assetBundleVariant = "ld";
+        }
+
+        string subName = "";
+
+        if (markName.Contains("/"))
+        {
+            subName = markName.Split('/')[1];
+
+        }
+        else
+        {
+            subName = markName;
+        }
+
+        string subPath = ai.assetBundleName.ToLower() + "." + ai.assetBundleVariant;
+
+        if (!recordDic.ContainsKey(subName))
+            recordDic.Add(subName, subPath);
+
+    }
+
+    /// <summary>
+    /// 获取标记名
+    /// </summary>	 
+    private static string GetBundlePath(FileInfo fileInfo, string subPath) //subPath = Assets/Art\Scene1
+    {
+        // D:\guoShuai\Projects\FramWork\Assets\Art\Scene1\Load\testthree\Capsule.prefab
+        string tmpPath = fileInfo.FullName;
+
+        tmpPath = GetUnityPath(tmpPath);
+
+        int assetCount = tmpPath.IndexOf(subPath);
+        assetCount += subPath.Length + 1;
+
+        int nameCount = tmpPath.LastIndexOf(fileInfo.Name); // Capsule.prefab
+
+        int tmpLength = nameCount - assetCount;
+
+        int tmpCount = subPath.LastIndexOf('/');
+
+        string sceneName = subPath.Substring(tmpCount + 1, subPath.Length - tmpCount - 1);
+
+        if (tmpLength > 0)
+        {
+            string subString = tmpPath.Substring(assetCount, tmpPath.Length - assetCount);
+            string subName = subString.Split('/')[0];
+            return sceneName + "/" + subName;
+        }
+
+        return sceneName;
+
+    }
+
+
+
+    /// <summary>
+    /// 把windows路径(反斜杠) 转换成 Unity的路径(正斜杠)
+    /// </summary>
+    private static string GetUnityPath(string windowsPath)
+    {
+        string unityPath = windowsPath.Replace('\\', '/');
+        return unityPath;
+    }
+    #endregion
+
+    #region 拷贝Lua脚本
+
+    [MenuItem("AssetBundle/拷贝Lua脚本")]
+    public static void CopyLuaScript()
+    {
+        string sourPath = Application.dataPath + "/Scripts/Lua/XLuaLogic";
+        string desPath = PathUtil.GetAssetBundlePath() + "/XLuaLogic";
+        FileUtil.CopyFileOrDirectory(sourPath, desPath);
+    }
+
     #endregion
 
     #region 生成MD5文件
     [MenuItem("AssetBundle/CreateMD5File(生成MD5文件)")]
     private static void CreateFile()
     {
+
         // outPath = E:/Shuai/AssetBundle/Assets/StreamingAssets/Windows
         string outPath = PathUtil.GetAssetBundlePath();
         string filePath = outPath + "/" + "version.txt";
@@ -543,5 +597,6 @@ public class ABEditor
     //}
 
     //#endregion
+
 
 }
